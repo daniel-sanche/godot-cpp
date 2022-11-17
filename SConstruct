@@ -221,8 +221,8 @@ if env["platform"] == "linux" or env["platform"] == "freebsd":
         env.Append(CCFLAGS=["-O3"])
 
     if env["bits"] == "64":
-        env.Append(LINKFLAGS=["-march", "arm64"])
-        env.Append(CCFLAGS=["-march", "arm64"])
+        env.Append(LINKFLAGS=["-march=arm64"])
+        env.Append(CCFLAGS=["-march=arm64"])
     elif env["bits"] == "32":
         env.Append(CCFLAGS=["-m32"])
         env.Append(LINKFLAGS=["-m32"])
